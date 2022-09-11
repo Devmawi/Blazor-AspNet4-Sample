@@ -1,0 +1,20 @@
+﻿@page "/login"
+@inject HttpClient Http
+
+<h3>Login</h3>
+<form>
+
+</form>
+
+@code {
+
+    public string AntiForgeryToken { get; set; } = "";
+
+    protected override async Task OnInitializedAsync()
+    {
+        AntiForgeryToken = await Http.GetStringAsync("http://localhost:16337/Account/ExternalLogin");
+    }
+
+
+
+}

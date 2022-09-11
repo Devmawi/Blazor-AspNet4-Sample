@@ -7,6 +7,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorClientApp", "BlazorCl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet4WebApp", "AspNet4WebApp\AspNet4WebApp.csproj", "{B2B547D3-83FB-4B3E-89C4-8269319768E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Server", "BlazorAppLoginApi\Server\BlazorAppLoginApi.Server.csproj", "{1DD453FF-F631-437B-B90B-1471D353ACFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Client", "BlazorAppLoginApi\Client\BlazorAppLoginApi.Client.csproj", "{0C29FEC9-CB89-4157-B475-4F20843B4EDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Shared", "BlazorAppLoginApi\Shared\BlazorAppLoginApi.Shared.csproj", "{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0C290B3-3333-41CD-9E9A-928036E731AF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +32,18 @@ Global
 		{B2B547D3-83FB-4B3E-89C4-8269319768E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2B547D3-83FB-4B3E-89C4-8269319768E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2B547D3-83FB-4B3E-89C4-8269319768E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DD453FF-F631-437B-B90B-1471D353ACFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DD453FF-F631-437B-B90B-1471D353ACFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DD453FF-F631-437B-B90B-1471D353ACFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DD453FF-F631-437B-B90B-1471D353ACFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C29FEC9-CB89-4157-B475-4F20843B4EDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C29FEC9-CB89-4157-B475-4F20843B4EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C29FEC9-CB89-4157-B475-4F20843B4EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C29FEC9-CB89-4157-B475-4F20843B4EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

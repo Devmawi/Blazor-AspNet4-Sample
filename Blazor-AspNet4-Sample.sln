@@ -3,20 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorClientApp", "BlazorClientApp\BlazorClientApp.csproj", "{9762DAD6-5AB5-444F-A7A6-C0CE159E4247}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorClientApp", "BlazorClientApp\BlazorClientApp.csproj", "{9762DAD6-5AB5-444F-A7A6-C0CE159E4247}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNet4WebApp", "AspNet4WebApp\AspNet4WebApp.csproj", "{B2B547D3-83FB-4B3E-89C4-8269319768E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Server", "BlazorAppLoginApi\Server\BlazorAppLoginApi.Server.csproj", "{1DD453FF-F631-437B-B90B-1471D353ACFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppLoginApi.Server", "BlazorAppLoginApi\Server\BlazorAppLoginApi.Server.csproj", "{1DD453FF-F631-437B-B90B-1471D353ACFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Client", "BlazorAppLoginApi\Client\BlazorAppLoginApi.Client.csproj", "{0C29FEC9-CB89-4157-B475-4F20843B4EDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppLoginApi.Client", "BlazorAppLoginApi\Client\BlazorAppLoginApi.Client.csproj", "{0C29FEC9-CB89-4157-B475-4F20843B4EDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppLoginApi.Shared", "BlazorAppLoginApi\Shared\BlazorAppLoginApi.Shared.csproj", "{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorAppLoginApi.Shared", "BlazorAppLoginApi\Shared\BlazorAppLoginApi.Shared.csproj", "{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0C290B3-3333-41CD-9E9A-928036E731AF}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorAppWithCookies", "BlazorAppWithCookies\BlazorAppWithCookies.csproj", "{6020FA7A-A847-403A-A50F-2D352E53C9F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FC47CB-C708-4BF4-BB4F-E21C5C39E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6020FA7A-A847-403A-A50F-2D352E53C9F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6020FA7A-A847-403A-A50F-2D352E53C9F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6020FA7A-A847-403A-A50F-2D352E53C9F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6020FA7A-A847-403A-A50F-2D352E53C9F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

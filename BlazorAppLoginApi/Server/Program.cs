@@ -11,14 +11,34 @@ builder.Services.AddRazorPages();
 //    .AddCookie();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyHeader();
+            policy.AllowAnyMethod();
+            policy.WithOrigins("http://localhost:5163", "http://localhost:5036");
+            policy.AllowCredentials();
+        });
+});
+
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
         options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
         options.SlidingExpiration = true;
-        options.AccessDeniedPath = "/Forbidden/";
-        options.LoginPath = "/account/login";
-        options.LogoutPath = "/account/logout";
+        //options.AccessDeniedPath = "/Forbidden/";
+        //options.LoginPath = "/account/login";
+        //options.LogoutPath = "/account/logout";
+        options.Events = new CookieAuthenticationEvents
+        {
+            OnRedirectToLogin = redirectContext =>
+            {
+                redirectContext.HttpContext.Response.StatusCode = 401;
+                return Task.CompletedTask;
+            }
+        };
     });
 
 var app = builder.Build();
@@ -36,12 +56,12 @@ else
 }
 
 
-
+app.UseCors();
 app.UseRouting();
 
 var cookiePolicyOptions = new CookiePolicyOptions
 {
-    MinimumSameSitePolicy = SameSiteMode.Strict,
+    MinimumSameSitePolicy = SameSiteMode.None,
 };
 app.UseCookiePolicy(cookiePolicyOptions);
 

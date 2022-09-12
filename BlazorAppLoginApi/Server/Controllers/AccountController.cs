@@ -31,14 +31,12 @@ namespace BlazorAppLoginApi.Server.Controllers
         [HttpGet]
         public string ExternalLogin()
         {
-            var s = new StringWriter();
-            _antiforgery.GetHtml(HttpContext).WriteTo(s, HtmlEncoder.Default);
-            return s.ToString();
+            return _antiforgery.GetTokens(HttpContext).RequestToken;
         }
 
         [Route("Login")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken()]
         public IActionResult Login([FromForm]LoginModel model, [FromQuery]string redirectUrl= "/FetchData")
         {
             if (!ModelState.IsValid)
@@ -56,7 +54,7 @@ namespace BlazorAppLoginApi.Server.Controllers
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
             HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(claimsIdentity));
 
-            return LocalRedirect(redirectUrl);
+            return NoContent();
         }
 
         [Route("SignOut")]

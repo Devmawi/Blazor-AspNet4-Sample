@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Components.Authorization;
 using System.Net.Http.Json;
 using System.Security.Claims;
 
-namespace BlazorAppLoginApi.Client
+namespace BlazorAppSharedCookie.Client
 {
     public class CustomAuthenticationStateProvider : AuthenticationStateProvider
     {
@@ -21,8 +21,7 @@ namespace BlazorAppLoginApi.Client
 
             try
             {
-             
-                var userInfo = await Http.GetFromJsonAsync<UserInfo>("api/account/userinfo");
+                var userInfo = await Http.GetFromJsonAsync<UserInfo>("http://localhost:5290/api/account/userinfo");
                 var identity = new ClaimsIdentity("Cookies");
                 identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, userInfo.Username));
                 identity.AddClaim(new Claim(ClaimTypes.Name, userInfo.Username));

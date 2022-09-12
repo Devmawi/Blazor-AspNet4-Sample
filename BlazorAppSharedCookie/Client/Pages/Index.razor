@@ -1,0 +1,31 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Authorization
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<AuthorizeView>
+    <Authorized>
+        Hello @context.User.Identity.Name
+    </Authorized>
+</AuthorizeView>
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    [CascadingParameter]
+    public Task<AuthenticationState> AuthState { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+
+        var authState = await AuthState;
+        var user = authState.User;
+    }
+}
